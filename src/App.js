@@ -1,18 +1,14 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import {Provider} from 'react-redux'
+import RouterComponent from './Router'
 
 
 
 class App extends React.Component{
   render() {
+    console.disableYellowBox = true;
     return (
-      <View>
-        <Text>Init</Text>
-      </View>
+      <RouterComponent/>
     );
   }
 }
