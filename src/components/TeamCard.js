@@ -28,7 +28,7 @@ const TeamCard =(props)=>{
       <View style = {subContainer}>
         <Text style = {text}>{losses}</Text>
       </View>
-      <View style = {[subContainer, {backgroundColor:'yellow'}]}>
+      <View style = {[subContainer, {backgroundColor:'#FFFFCC'}]}>
         <Text style = {text}>{pct}</Text>
       </View>
     </View>

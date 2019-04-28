@@ -10,7 +10,7 @@ import{
   rankingsRequest,
   leagueChanged
 } from '../../actions'
-import {landingScreenStyle} from '../styles'
+import {landingScreenStyle, shadowStyle} from '../styles'
 import WelcomeText from '../WelcomeText'
 import Button from '../common/Button'
 import{NL,AL} from '../../utils/misc'
@@ -44,7 +44,7 @@ class Landing extends React.Component{
         loading?
           <ActivityIndicator size="large" color="#0000ff" />
           :
-          <View>
+          <View style = {shadowStyle.container}>
             <Button
               label = {`${AL} Division Selection`}
               onPress = {()=>this.navigateToDivisionScreen(AL)}

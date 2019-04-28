@@ -8,7 +8,7 @@ import {Actions} from 'react-native-router-flux'
 import{
   divisionChanged,
 } from '../../actions'
-import {divisionSelectionScreenStyle} from '../styles'
+import {divisionSelectionScreenStyle, shadowStyle} from '../styles'
 import Button from '../common/Button'
 import{
   EAST,
@@ -35,18 +35,20 @@ class DivisionSelection extends React.Component{
     } = this.props
     return(
       <View style = {masterContainer}>
-        <Button
-        label = {`${league} ${EAST}`}
-        onPress = {()=>this.navigateToRankingsScreen(EAST)}
-        />
-        <Button
-        label = {`${league} ${CENTRAL}`}
-        onPress = {()=>this.navigateToRankingsScreen(CENTRAL)}
-        />
-        <Button
-        label = {`${league} ${WEST}`}
-        onPress = {()=>this.navigateToRankingsScreen(WEST)}
-        />
+        <View style = {shadowStyle.container}>
+          <Button
+          label = {`${league} ${EAST}`}
+          onPress = {()=>this.navigateToRankingsScreen(EAST)}
+          />
+          <Button
+          label = {`${league} ${CENTRAL}`}
+          onPress = {()=>this.navigateToRankingsScreen(CENTRAL)}
+          />
+          <Button
+          label = {`${league} ${WEST}`}
+          onPress = {()=>this.navigateToRankingsScreen(WEST)}
+          />
+        </View>
       </View>
     )
   }

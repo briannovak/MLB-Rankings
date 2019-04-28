@@ -5,7 +5,6 @@ import{
 } from 'react-native'
 import {welcomeTextStyle} from './styles'
 
-
 //functional component for welcome text of landing screen
 const WelcomeText =()=>{
   let{

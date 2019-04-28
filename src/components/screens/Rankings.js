@@ -6,7 +6,7 @@ import{
 import {connect} from 'react-redux'
 import TeamCard from '../TeamCard'
 import DivisionBanner from '../DivisionBanner'
-import {rankingsScreenStyle} from '../styles'
+import {rankingsScreenStyle, shadowStyle} from '../styles'
 import{
   EAST,
   CENTRAL,
@@ -68,6 +68,7 @@ class Rankings extends React.Component{
           league={league}
           division={division}
           />
+        <View style={shadowStyle.container}>
         <TeamCard
           team = "Team"
           wins = "W"
@@ -75,6 +76,8 @@ class Rankings extends React.Component{
           pct = "PCT"
           />
         {this.teamCardReturner()}
+      </View>
+
       </View>
     )
   }
