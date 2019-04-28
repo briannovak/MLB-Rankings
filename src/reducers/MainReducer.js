@@ -25,19 +25,21 @@ export default (state = INITIAL_STATE, action)=>{
         type,
         payload
     } = action
+    console.log('THIS IS A CHECK OF THE TYPE', type)
+    console.log('THIS IS A CHECK OF THE ACTION', payload)
 
     switch(type){
         case RANKINGS_REQUEST:
         return{...state, loading:false, ...payload}
 
         case ERROR_CHANGED:
-        return{...state, loading:false, error:payload.error}
+        return{...state, loading:false, error:payload}
 
         case DIVISION_CHANGED:
-        return{...state, division:payload.division}
+        return{...state, division:payload}
 
         case LEAGUE_CHANGED:
-        return{...state, league:payload.league}
+        return{...state, league:payload}
 
         default:
         return state

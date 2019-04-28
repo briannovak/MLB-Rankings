@@ -3,15 +3,13 @@ import{
   Text,
   View,
 } from 'react-native'
-import {boilerPlate} from '../styles'
+
 
 class Rankings extends React.Component{
   render(){
-    let{
-      container
-    } = boilerPlate
+
     return(
-      <View style = {container}>
+      <View>
         <Text>Rankings</Text>
       </View>
     )

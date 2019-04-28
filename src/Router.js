@@ -14,17 +14,16 @@ class RouterComponent extends React.Component{
                       <Scene
                       key = "landing"
                       component={Landing}
-                      hideNavBar={true}
+                      title = "Major League Baseball"
                       />
                       <Scene
                       key = "divisionselection"
                       component={DivisionSelection}
-                      hideNavBar={true}
+                      title = "Select Division"
                       />
                       <Scene
                       key = "rankings"
                       component={Rankings}
-                      hideNavBar={true}
                       />
                     </Scene>
                 </Scene>

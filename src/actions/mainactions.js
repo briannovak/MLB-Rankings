@@ -27,12 +27,13 @@ export const divisionChanged = (str)=>{
 //action to change league
 export const leagueChanged = (str)=>{
   return{
-    type:DIVISION_CHANGED,
+    type:LEAGUE_CHANGED,
     payload:str
   }
 }
 
 //performs asynchronous action to grab data for rankings as well as sort and delineate the data
+//also account for errors
 export const rankingsRequest = ()=>{
   return async(dispatch)=>{
     try{
@@ -49,7 +50,7 @@ export const rankingsRequest = ()=>{
       let NLCentral = data.filter(team=>nlCentralFilter(team))
       dispatch({type: RANKINGS_REQUEST, payload:{ALEast, ALWest,ALCentral, NLEast, NLWest, NLCentral, loading:false}})
     }catch(err){
-      dispatch({type: ERROR_CHANGED, payload:"We are experiencing technical difficulties, please check back later."})
+      dispatch({type: ERROR_CHANGED, payload:"We are experiencing technical difficulties."})
     }
   }
 }
