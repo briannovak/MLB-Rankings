@@ -9,4 +9,4 @@ This application was built with react native and utilizes redux for state manage
 1. Fork and clone repository
 2. run npm install from the project root
 3. open the mlb.xcodeproj within the ios directory
-4. within xcode build and run the application on your simulator of choice (or real device)
+4. within xcode build and run the application on your iphone simulator of choice (or real device)
