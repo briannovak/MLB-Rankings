@@ -4,7 +4,7 @@ The MLB-Rankings app enables users to view the current standings for their favor
 This application was built with react native and utilizes redux for state management.
 
 
-#Instructions
+# Instructions
 
 1. Fork and clone repository
 2. run npm install from the project root
