@@ -7,7 +7,7 @@ const{
   width
 } = Dimensions.get('window')
 //A shared stylesheet makes for a more organized application and leaner components
-//scaling fonts, heights, and widths in accordance with screen dimensions allow ui to carry over all screen sizes
+//scaling fonts, heights, and widths in accordance with screen dimensions allow ui to carry over to all screen sizes
 export const landingScreenStyle = StyleSheet.create({
   masterContainer:{
     flex:1,
@@ -41,14 +41,14 @@ export const teamCardStyle = StyleSheet.create({
     flexDirection:'row'
   },
   subContainer:{
-    height:60,
-    width:83.75,
+    height:height*0.08,
+    width:width*.20,
     borderWidth:1,
     justifyContent:'center',
     alignItems:'center'
   },
   text:{
-    fontSize:18,
+    fontSize:width*0.04,
     textAlign:'center'
   }
 })
@@ -75,5 +75,14 @@ export const buttonStyle =StyleSheet.create({
   },
   text:{
     fontSize:width*0.04
+  }
+})
+
+export const divisionBannerStyle = StyleSheet.create({
+  container:{
+
+  },
+  text:{
+    fontSize:width*0.06,
   }
 })

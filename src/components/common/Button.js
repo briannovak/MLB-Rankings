@@ -7,7 +7,7 @@ import{
 import {buttonStyle} from '../styles'
 
 
-
+//functional component for button used throughout the app
 const Button =(props)=>{
   let{
     text,

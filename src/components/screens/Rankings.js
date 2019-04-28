@@ -5,6 +5,7 @@ import{
 } from 'react-native'
 import {connect} from 'react-redux'
 import TeamCard from '../TeamCard'
+import DivisionBanner from '../DivisionBanner'
 import {rankingsScreenStyle} from '../styles'
 import{
   EAST,
@@ -57,8 +58,16 @@ class Rankings extends React.Component{
     let{
       masterContainer
     } = rankingsScreenStyle
+    let{
+      league,
+      division,
+    } = this.props
     return(
       <View style = {masterContainer}>
+        <DivisionBanner
+          league={league}
+          division={division}
+          />
         <TeamCard
           team = "Team"
           wins = "W"
