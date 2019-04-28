@@ -14,7 +14,7 @@ class RouterComponent extends React.Component{
                       <Scene
                       key = "landing"
                       component={Landing}
-                      title = "Major League Baseball"
+                      title = "MLB"
                       />
                       <Scene
                       key = "divisionselection"
@@ -24,6 +24,7 @@ class RouterComponent extends React.Component{
                       <Scene
                       key = "rankings"
                       component={Rankings}
+                      title = "Rankings"
                       />
                     </Scene>
                 </Scene>

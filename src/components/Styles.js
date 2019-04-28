@@ -6,6 +6,7 @@ const{
   height,
   width
 } = Dimensions.get('window')
+//A shared stylesheet makes for a more organized application and leaner components
 //scaling fonts, heights, and widths in accordance with screen dimensions allow ui to carry over all screen sizes
 export const landingScreenStyle = StyleSheet.create({
   masterContainer:{
@@ -25,7 +26,31 @@ export const divisionSelectionScreenStyle = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center'
   },
+})
 
+export const rankingsScreenStyle = StyleSheet.create({
+  masterContainer:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+  }
+})
+
+export const teamCardStyle = StyleSheet.create({
+  masterContainer:{
+    flexDirection:'row'
+  },
+  subContainer:{
+    height:60,
+    width:83.75,
+    borderWidth:1,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  text:{
+    fontSize:18,
+    textAlign:'center'
+  }
 })
 
 export const welcomeTextStyle =StyleSheet.create({

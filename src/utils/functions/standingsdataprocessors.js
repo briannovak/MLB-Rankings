@@ -6,6 +6,8 @@ import{
   WEST,
 } from "../misc"
 
+//the series of functons below are used in filter mechanisms
+//to distill down data for each individual division within the respective leagues
 export const alEastFilter = ({division, league})=>{
   return league === AL && division ===EAST
 }
@@ -25,6 +27,9 @@ export const nlCentralFilter = ({division, league})=>{
   return league === NL && division ===CENTRAL
 }
 
+//this function takes in the initial array of data from the request
+//and returns the array with each object being allocated a pct property
+//the array is also sorted(descending) by this pct property
 export const arrSortWinPercentageAssign = (arr)=>{
   arr.forEach((team)=>{
     let{

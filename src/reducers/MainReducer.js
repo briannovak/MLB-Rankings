@@ -25,8 +25,6 @@ export default (state = INITIAL_STATE, action)=>{
         type,
         payload
     } = action
-    console.log('THIS IS A CHECK OF THE TYPE', type)
-    console.log('THIS IS A CHECK OF THE ACTION', payload)
 
     switch(type){
         case RANKINGS_REQUEST:

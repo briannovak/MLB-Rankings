@@ -18,6 +18,8 @@ import{
 
 class DivisionSelection extends React.Component{
   navigateToRankingsScreen = (division)=>{
+    //this function is allocated to each division button
+    //it navigates to the rankings screen as well as sets the data for the division piece of application state
     let{
     divisionChanged,
   } = this.props

@@ -24,7 +24,8 @@ class Landing extends React.Component{
   }
 
   navigateToDivisionScreen = (league)=>{
-    //this function is passed to both of the button components and enable changin of the league portion of state and navigation
+    //this function is allocated to each league button
+    //it navigates to the division selection screen as well as sets the data for the league piece of application state
     let{
       leagueChanged
     } = this.props
@@ -33,7 +34,7 @@ class Landing extends React.Component{
   }
 
   buttonsReturner = ()=>{
-    //this function either returns an activity indicator if loading or returns a pair of buttons
+    //this function either returns an activity indicator if loading or returns a pair of buttons with appropriate props
     let{
       loading,
       error
@@ -56,6 +57,7 @@ class Landing extends React.Component{
       )
   }
   render(){
+    //the ternary in the render either returns an error encountered in the data grab or returns the eventual outcome of the button return function
     let{
       loading,
       error
