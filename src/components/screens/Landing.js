@@ -4,10 +4,20 @@ import{
   View,
 } from 'react-native'
 import {connect} from 'react-redux'
+import{
+  rankingsRequest,
+  leagueChanged
+} from '../../actions'
 import {boilerPlate} from '../styles'
 
 
 class Landing extends React.Component{
+  componentDidMount = ()=>{
+    let{
+      rankingsRequest
+    } = this.props
+    rankingsRequest()
+  }
   render(){
     let{
       container
@@ -23,12 +33,17 @@ class Landing extends React.Component{
 const mapStateToProps = ({main})=>{
   let{
     loading,
-    error
+    error,
+    NLEast,
   } = main
   return{
     loading,
-    error
+    error,
+    NLEast
   }
 }
 
-export default connect(mapStateToProps, {})(Landing)
+export default connect(mapStateToProps, {
+  rankingsRequest,
+  leagueChanged
+})(Landing)
