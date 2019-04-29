@@ -7,13 +7,8 @@ import{
 import axios from "axios"
 import {REQUEST_URL} from "../utils/misc"
 import {
-  alEastFilter,
-  alWestFilter,
-  alCentralFilter,
-  nlEastFilter,
-  nlWestFilter,
-  nlCentralFilter,
-  arrSortWinPercentageAssign
+  arrSortWinPercentageAssign,
+  masterTeamFilter
 } from "../utils/functions/standingsdataprocessors"
 
 //action to change division
@@ -41,13 +36,11 @@ export const rankingsRequest = ()=>{
       let{
         data
       } = standings
-      datat = arrSortWinPercentageAssign(data)
-      let ALEast = data.filter(team=>alEastFilter(team))
-      let ALWest = data.filter(team=>alWestFilter(team))
-      let ALCentral = data.filter(team=>alCentralFilter(team))
-      let NLEast = data.filter(team=>nlEastFilter(team))
-      let NLWest = data.filter(team=>nlWestFilter(team))
-      let NLCentral = data.filter(team=>nlCentralFilter(team))
+      data = arrSortWinPercentageAssign(data)
+      data = masterTeamFilter(data)
+      let{
+        ALEast,ALWest,ALCentral,NLEast, NLWest,NLCentral
+      } = data
       dispatch({type: RANKINGS_REQUEST, payload:{ALEast, ALWest,ALCentral, NLEast, NLWest, NLCentral, loading:false}})
     }catch(err){
       dispatch({type: ERROR_CHANGED, payload:"We are experiencing technical difficulties."})

@@ -6,25 +6,32 @@ import{
   WEST,
 } from "../misc"
 
-//the series of functons below are used in filter mechanisms
-//to distill down data for each individual division within the respective leagues
-export const alEastFilter = ({division, league})=>{
-  return league === AL && division ===EAST
-}
-export const alWestFilter = ({division, league})=>{
-  return league === AL && division ===WEST
-}
-export const alCentralFilter = ({division, league})=>{
-  return league === AL && division ===CENTRAL
-}
-export const nlEastFilter = ({division, league})=>{
-  return league === NL && division ===EAST
-}
-export const nlWestFilter = ({division, league})=>{
-  return league === NL && division ===WEST
-}
-export const nlCentralFilter = ({division, league})=>{
-  return league === NL && division ===CENTRAL
+
+//The masterTeamFilter function iterates through the input array and pushes its elements into appropriate leaguedivision arrays
+export const masterTeamFilter = (arr)=>{
+  let ALEast = []
+  let ALWest = []
+  let ALCentral = []
+  let NLEast = []
+  let NLWest = []
+  let NLCentral = []
+  for(let i =0; i<arr.length; i++){
+    let{league, division} = arr[i]
+    if(league === AL && division ===EAST){
+      ALEast.push(arr[i])
+    }else if(league === AL && division ===WEST){
+      ALWest.push(arr[i])
+    }else if(league === AL && division ===CENTRAL){
+      ALCentral.push(arr[i])
+    }else if(league === NL && division ===EAST){
+      NLEast.push(arr[i])
+    }else if(league === NL && division ===WEST){
+      NLWest.push(arr[i])
+    }else if(league === NL && division ===CENTRAL){
+      NLCentral.push(arr[i])
+    }
+  }
+  return {ALEast,ALWest,ALCentral,NLEast, NLWest,NLCentral}
 }
 
 //this function takes in the initial array of data from the request
